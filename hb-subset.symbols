@@ -3,13 +3,19 @@ _hb_blob_destroy
 _hb_blob_get_data
 _hb_blob_get_length
 _hb_face_create
+_hb_face_collect_unicodes
 _hb_face_destroy
+_hb_face_get_upem
 _hb_face_get_empty
 _hb_face_reference_blob
+_hb_face_reference_table
 _hb_set_add
 _hb_set_clear
+_hb_ot_var_get_axis_infos
 _hb_set_create
 _hb_set_del
+_hb_set_get_population
+_hb_set_next_many
 _hb_set_destroy
 _hb_set_invert
 _hb_set_union
@@ -30,3 +36,4 @@ _hb_subset_or_fail
 _hb_subset_preprocess
 _malloc
 _free
+_free_ptr

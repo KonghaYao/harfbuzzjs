@@ -5,7 +5,7 @@ library for client/server side JavaScript projects.
 See the demo [here](https://harfbuzz.github.io/harfbuzzjs/).
 
 ## Building
-1. Install emscripten
+1. Install emscripten `curl -fsSL https://techoverflow.net/scripts/install-emscripten.sh | bash`
 2. `./build.sh`
 
 ## Download

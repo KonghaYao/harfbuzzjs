@@ -18,4 +18,4 @@ em++ \
 	-s EXPORTED_FUNCTIONS=@hb-subset.symbols \
 	-s INITIAL_MEMORY=65MB \
 	-o hb-subset.wasm \
-	harfbuzz/src/harfbuzz-subset.cc
+	hbjs-subset.cc
