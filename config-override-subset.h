@@ -5,3 +5,4 @@
 #undef HB_NO_VAR
 #undef HB_NO_FACE_COLLECT_UNICODES
 #undef HB_NO_STYLE
+#undef HB_NO_VERTICAL
