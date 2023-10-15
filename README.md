@@ -1,4 +1,4 @@
-# harfbuzzjs
+# harfbuzzjs 中文网字计划版本，统一增强功能
 
 Providing [HarfBuzz](https://github.com/harfbuzz/harfbuzz) shaping
 library for client/server side JavaScript projects.
@@ -8,7 +8,7 @@ See the demo [here](https://harfbuzz.github.io/harfbuzzjs/).
 ## Building
 
 1. Install emscripten `curl -fsSL https://techoverflow.net/scripts/install-emscripten.sh | bash`
-2. `git submodule update`
+2. `git submodule init && git submodule update`
 3. `./build.sh`
 4. `./build-subset.sh`
 
