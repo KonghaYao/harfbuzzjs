@@ -28,7 +28,8 @@ jobs:
           version: ${{env.EM_VERSION}}
           actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
       - name: update harfbuzz to latest tag
-        run: cd harfbuzz && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
+      - run: git submodule init && git submodule update
+      - run: cd harfbuzz && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
       - name: Build hb.wasm
         run: ./build.sh
       - name: Build hb-subset.wasm
