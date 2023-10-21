@@ -30,7 +30,7 @@ jobs:
       - name: update submodule
         run: git submodule init && git submodule update
       - name: update harfbuzz to latest tag
-        run: cd harfbuzz && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
+        run: cd harfbuzz && git pull && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
       - name: Build hb.wasm
         run: ./build.sh
       - name: Build hb-subset.wasm
