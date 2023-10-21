@@ -22,15 +22,15 @@ jobs:
         with:
           path: ${{env.EM_CACHE_FOLDER}}
           key: ${{env.EM_VERSION}}-${{runner.os}}
+      - name: update submodule
+        run: git submodule init && git submodule update
+      - name: update harfbuzz to latest tag
+        run: cd harfbuzz && git checkout main && git fetch && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
       - name: Setup Emscripten
         uses: mymindstorm/setup-emsdk@v11
         with:
           version: ${{env.EM_VERSION}}
           actions-cache-folder: ${{env.EM_CACHE_FOLDER}}
-      - name: update submodule
-        run: git submodule init && git submodule update
-      - name: update harfbuzz to latest tag
-        run: cd harfbuzz && git fetch && git checkout $(git describe --tags `git rev-list --tags --max-count=1`) && cd ../
       - name: Build hb.wasm
         run: ./build.sh
       - name: Build hb-subset.wasm
