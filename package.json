@@ -1,7 +1,8 @@
 {
     "name": "@konghayao/harfbuzzjs",
-    "version": "9.0.0",
+    "version": "9.0.4",
     "description": "Minimal version of HarfBuzz for JavaScript use",
+    "type": "module",
     "main": "index.js",
     "scripts": {
         "test": "mocha test/index.js"
